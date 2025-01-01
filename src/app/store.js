@@ -16,3 +16,12 @@ const courseStore = (set) => ({
         })
     })
 })
+
+
+const useCourseStore = create(
+    devtools(
+        persist(courseStore, { name: "course-storage" })
+    )
+)
+
+export default useCourseStore;
